@@ -22,7 +22,7 @@ R20: 8A
 ```
 
 and then render the pattern into these 3d models that you play around with:
-![A ball example with Knotly](./assets/docs_ball.png)
+![A ball example with Knotly](./images/docs_ball.png)
 
 ## Why Knotly
 
