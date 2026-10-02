@@ -4,11 +4,11 @@ Many crochet projects are made from pieces that are worked separately and assemb
 
 ## Choosing how to work
 
-Give each separately constructed piece a unique part code and, optionally, a descriptive title, such as `P1: Body` or `P2: Ear`. Always define a part before referring to it from another part. Referencing stitches that do not exist will result in a runtime error. See [Parts](/docs/dsl/fundamentals#parts) for the basic pattern structure.
+Give each separately constructed piece a unique part code and, optionally, a descriptive title, such as `P1: Body` or `P2: Ear`. Always define a part before referring to it from another part. Referencing stitches that do not exist will result in a runtime error. See [Parts](./fundamentals.md#parts) for the basic pattern structure.
 
-Decide which pieces need a structural connection. You can always position independent parts manually in the scene, but do keep in mind that they are simulated separately. If one piece must continue from stitches in another, select those stitches in the new part as `R0`; see [Begin with existing stitches](/docs/dsl/writing-instructions#begin-with-existing-stitches) for details. Use a [join](#joining-parts) when the working path should incorporate another part’s last round, or [sewing](#sewing-parts) when two or more independent parts should be attached to each other.
+Decide which pieces need a structural connection. You can always position independent parts manually in the scene, but do keep in mind that they are simulated separately. If one piece must continue from stitches in another, select those stitches in the new part as `R0`; see [Begin with existing stitches](./writing-instructions.md#begin-with-existing-stitches) for details. Use a [join](#joining-parts) when the working path should incorporate another part’s last round, or [sewing](#sewing-parts) when two or more independent parts should be attached to each other.
 
-Knotly keeps one color palette for the whole project. A later part can [reuse a color](/docs/dsl/writing-instructions#reusing-an-existing-color) with an index such as `col[1]`, but the active color itself resets when a part ends, so select it again in each new part if you want to keep using that color. [Stitch selectors](/docs/dsl/writing-instructions#selecting-stitches) are used to identify existing stitches across parts. Keep these codes stable once another instruction refers to them.
+Knotly keeps one color palette for the whole project. A later part can [reuse a color](./writing-instructions.md#reusing-an-existing-color) with an index such as `col[1]`, but the active color itself resets when a part ends, so select it again in each new part if you want to keep using that color. [Stitch selectors](./writing-instructions.md#selecting-stitches) are used to identify existing stitches across parts. Keep these codes stable once another instruction refers to them.
 
 ## Joining parts
 
@@ -53,13 +53,13 @@ P3: Body
 R0: col[1], P1R3, P2R3
 R4-R5: 24sc
 ```
-The `join` approach often follows the natural crocheting process more closely, while using selectors in `R0` makes the project’s structure more explicit and the pattern easier to follow. Choose the approach you’re most comfortable with or the one that best suits your design. Check out [Begin with existing stitches](/docs/dsl/writing-instructions#begin-with-existing-stitches) if you prefer the latter.
+The `join` approach often follows the natural crocheting process more closely, while using selectors in `R0` makes the project’s structure more explicit and the pattern easier to follow. Choose the approach you’re most comfortable with or the one that best suits your design. Check out [Begin with existing stitches](./writing-instructions.md#begin-with-existing-stitches) if you prefer the latter.
 
 ## Sewing parts
 
 Use a `SEW:` line to connect stitches that have already been made. Sewing adds connections between existing stitches without creating new ones, so it does not change either part’s stitch count.
 
-A `SEW:` line uses [stitch selectors](/docs/dsl/writing-instructions#selecting-stitches) to identify two sets of stitches to connect. Separate the selectors with a hyphen (`-`) to pair stitches in their written order, or a tilde (`~`) to reverse the second selection before pairing. For sewing to succeed, both selections must contain the same number of stitches.
+A `SEW:` line uses [stitch selectors](./writing-instructions.md#selecting-stitches) to identify two sets of stitches to connect. Separate the selectors with a hyphen (`-`) to pair stitches in their written order, or a tilde (`~`) to reverse the second selection before pairing. For sewing to succeed, both selections must contain the same number of stitches.
 
 Note that a `SEW:` line must appear within the scope of one of the parts it connects. Because selectors can only reference stitches already defined, place the line after both sets of stitches have been worked — usually at the end of the second part’s instructions. Placing it outside the scope of both parts produces an error and thus should be avoided.
 
@@ -119,7 +119,7 @@ SEW: P1R2S1:S3-P2R2S12:S10, P1R2S10:S12-P2R2S3:S1
 While this makes the pattern more compact, separate lines are usually easier to read, especially when there are ranges inside the selectors.
 
 > [!NOTE]
-> Sewing within a part is also possible. To shape a single part by sewing two areas of it together, see [Sewing within a part](/docs/dsl/shaping#sewing-within-a-part).
+> Sewing within a part is also possible. To shape a single part by sewing two areas of it together, see [Sewing within a part](./shaping.md#sewing-within-a-part).
 
 ## Naming a multi-part object
 

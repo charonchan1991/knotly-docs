@@ -50,7 +50,7 @@ R2: 6sc2inc
 R3: 6(sc, sc2inc)
 ```
 
-Knotly uses the same `R` prefix for both rounds and rows. Whether an instruction is interpreted as a joined round, part of a continuous spiral, or a flat row depends on the project’s default round mode. You can override the default round mode and explicitly tell Knotly how to interpret the current line by using [end-of-round commands](/docs/dsl/fundamentals#round-modes-and-end-of-round-controls) at the end of the line.
+Knotly uses the same `R` prefix for both rounds and rows. Whether an instruction is interpreted as a joined round, part of a continuous spiral, or a flat row depends on the project’s default round mode. You can override the default round mode and explicitly tell Knotly how to interpret the current line by using [end-of-round commands](./fundamentals.md#round-modes-and-end-of-round-controls) at the end of the line.
 
 Keep rounds and rows in their intended working order and group them beneath the appropriate part:
 
@@ -71,7 +71,7 @@ The round code is optional in an instruction line but it is highly recommended. 
 > [!WARNING]
 > Changing the round code on an existing line may create duplicate round codes and/or inconsistent references throughout the project, especially if the part is connected to other parts either by sewing or by joining. Proceed with caution when making this change.
 
-Although not recommended, round codes can be duplicated or skipped within a part’s scope. When a round code is duplicated, every line is still executed, but only the first occurrence can be referenced elsewhere. Skipping a round number disrupts the natural numbering sequence and may cause reference issues. Avoid doing so unless you are intentionally continuing the numbering of a parent part when [starting from existing stitches](/docs/dsl/writing-instructions#begin-with-existing-stitches).
+Although not recommended, round codes can be duplicated or skipped within a part’s scope. When a round code is duplicated, every line is still executed, but only the first occurrence can be referenced elsewhere. Skipping a round number disrupts the natural numbering sequence and may cause reference issues. Avoid doing so unless you are intentionally continuing the numbering of a parent part when [starting from existing stitches](./writing-instructions.md#begin-with-existing-stitches).
 
 > [!TIP]
 > You can have Knotly automatically manage all round codes by enabling **Normalize round codes** in the editor panel’s formatter.
@@ -99,7 +99,7 @@ To begin with a foundation chain ring, you will need to make `R0` explicit to ov
 # Assuming current round mode is set to [Joined rounds]
 R0: 7ch  // This line CANNOT be omitted because a magic ring is assumed when missing
 ```
-For more information about default foundation behavior, see [Starting a part](/docs/dsl/writing-instructions#starting-a-part).
+For more information about default foundation behavior, see [Starting a part](./writing-instructions.md#starting-a-part).
 
 
 ### Stitches and commands
@@ -112,9 +112,9 @@ Stitches and commands can be nested inside parentheses. Commas inside parenthese
 ```
 R2: 2(sc, sc2inc), [sc, hdc, sc]+, 3sc
 ```
-In the example above, parentheses create a repeatable group, while square brackets create a compound increase with different stitch types. An inner sequence of stitches and commands has higher priority and is processed before the outer sequence. For more information about how to use parentheses, see [Repeating a sequence](/docs/dsl/writing-instructions#repeating-a-sequence). For information about how to construct a compound stitch, see [Compound increases and decreases](/docs/dsl/shaping#compound-increases-and-decreases).
+In the example above, parentheses create a repeatable group, while square brackets create a compound increase with different stitch types. An inner sequence of stitches and commands has higher priority and is processed before the outer sequence. For more information about how to use parentheses, see [Repeating a sequence](./writing-instructions.md#repeating-a-sequence). For information about how to construct a compound stitch, see [Compound increases and decreases](./shaping.md#compound-increases-and-decreases).
 
-See [Language Reference](/docs/dsl/language-reference) for a complete list of all supported stitches and commands that you can use in an instruction line.
+See [Language Reference](./language-reference.md) for a complete list of all supported stitches and commands that you can use in an instruction line.
 
 ### Comments
 

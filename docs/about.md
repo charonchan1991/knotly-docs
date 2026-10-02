@@ -22,7 +22,7 @@ R20: 8A
 ```
 
 and then render the pattern into these 3d models that you play around with:
-![A ball example with Knotly](/images/docs_ball.png)
+![A ball example with Knotly](./assets/docs_ball.png)
 
 ## Why Knotly
 
@@ -56,9 +56,9 @@ While Knotly uses rigorous physics-based simulation to produce the most realisti
 ## Is Knotly hard to learn?
 It may feel a little daunting at first, but once you get the hang of it, using Knotly can feel as natural as crocheting itself — especially if you already have experience with text-based crochet patterns. There is a bit of a learning curve if you are new to the crochet world, but practice makes perfect.
 
-Before getting started, familiarize yourself with Knotly’s instruction language first. Knotly uses a domain-specific language (DSL) whose commands are largely based on crochet terminology widely recognized by crocheters around the world. If you haven’t already, take a look at [Instruction Language: Fundamentals](/docs/dsl) for a crash course.
+Before getting started, familiarize yourself with Knotly’s instruction language first. Knotly uses a domain-specific language (DSL) whose commands are largely based on crochet terminology widely recognized by crocheters around the world. If you haven’t already, take a look at [Instruction Language: Fundamentals](./dsl/fundamentals.md) for a crash course.
 
 > [!NOTE]
 > We’re currently working on an AI chatbot to help you learn Knotly’s instruction language and streamline the design process. Stay tuned for updates.
 
-Feel ready to begin? [Go to projects](/projects) now to create a new project or explore our gallery for examples!
+Feel ready to begin? [Go to projects](https://www.knotly.com/projects) now to create a new project or explore our gallery for examples!

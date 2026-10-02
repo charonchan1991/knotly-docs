@@ -58,7 +58,7 @@ You can switch between parts using the dropdown in the pattern editor. A badge n
 
 The counter gutter to the right of the main editing area shows the stitch total for each instruction line. If a line has a warning or error, expand its counter to see the details. For more information on the counter gutter, see [Know your stitch counts](#know-your-stitch-counts) below.
 
-At the bottom of the editor, use the **Default round mode** button to set the project’s [end-of-round behavior](/docs/dsl/fundamentals#round-modes-and-end-of-round-controls). The **Format pattern text** button beside it opens the formatter popup that helps you [clean up your pattern text](#clean-up-with-formatter).
+At the bottom of the editor, use the **Default round mode** button to set the project’s [end-of-round behavior](./dsl/fundamentals.md#round-modes-and-end-of-round-controls). The **Format pattern text** button beside it opens the formatter popup that helps you [clean up your pattern text](#clean-up-with-formatter).
 
 After making changes, click **Run** to rerun the simulation and update the 3D preview.
 
@@ -124,7 +124,7 @@ R4-R6: 18X
 R7: 6(X, A)
 R8: 6A
 ```
-This pattern text will generate a very basic but interactive ball in the main canvas. To learn more about how to write instructions in Knotly, see [Instruction Language: Fundamentals](/docs/dsl/fundamentals).
+This pattern text will generate a very basic but interactive ball in the main canvas. To learn more about how to write instructions in Knotly, see [Instruction Language: Fundamentals](./dsl/fundamentals.md).
 
 ### Break down your project to parts
 
@@ -167,9 +167,9 @@ R0: 12CH  // This creates a chain ring, overriding the default
 R1: 6(X, V)
 ```
 
-You can override the default mode for a line with an [end-of-round command](/docs/dsl/fundamentals#round-modes-and-end-of-round-controls). Use `$sl` / `$ss` to close a round, `-$sl` / `-$ss` to leave it open, or `turn` to reverse the working direction for the next round or row.
+You can override the default mode for a line with an [end-of-round command](./dsl/fundamentals.md#round-modes-and-end-of-round-controls). Use `$sl` / `$ss` to close a round, `-$sl` / `-$ss` to leave it open, or `turn` to reverse the working direction for the next round or row.
 
-For a complete guidance, see [Starting a part](/docs/dsl/writing-instructions#starting-a-part).
+For a complete guidance, see [Starting a part](./dsl/writing-instructions.md#starting-a-part).
 
 ### Preview as you edit
 
@@ -181,7 +181,7 @@ Switch between the render modes to evaluate your design:
 - **Chart** shows standard crochet symbols and is useful for checking stitch types and placement
 - **Realistic** gives the clearest impression of the final material, color, and overall silhouette
 
-See [Working with render modes](/docs/essentials#working-with-render-modes) for a detailed introduction. 
+See [Working with render modes](./essentials.md#working-with-render-modes) for a detailed introduction. 
 
 When the shape does not look right, return to the last round or row that previewed correctly. Compare its produced count with the number consumed by the next line, then inspect the placement of increases, decreases, skips, and turns. Add one or two lines at a time; move on when you are happy with the preview. This is usually faster than debugging a completed pattern all at once.
 
@@ -193,7 +193,7 @@ There are generally two ways to assemble multiple parts into a complete project.
 
 This method is generally faster to simulate because the interactions between parts remain simple. However, because each part is simulated independently, the parts do not influence one another’s shape. This may not matter when the parts are simply attached or glued together, but some construction methods can cause connected parts to affect one another’s shaping.
 
-In these cases, you may want to simulate all the parts together as a single object. Sewing or joining them is a good approach because these commands automatically group the connected parts into one object, allowing the physics engine to simulate their interactions instead of treating them as separate, loose parts. Because this increases the structural complexity, the simulation may take slightly longer to complete than the first approach. See [Multi-part Objects](/docs/dsl/multi-part) for complete guidance.
+In these cases, you may want to simulate all the parts together as a single object. Sewing or joining them is a good approach because these commands automatically group the connected parts into one object, allowing the physics engine to simulate their interactions instead of treating them as separate, loose parts. Because this increases the structural complexity, the simulation may take slightly longer to complete than the first approach. See [Multi-part Objects](./dsl/multi-part.md) for complete guidance.
 
 Parts built from existing stitches from another part are also structurally connected, so this technique can be used to assemble multiple parts as well:
 
@@ -208,7 +208,7 @@ R0: P1R5
 R6: FLO, 12FW  // Continuing on the front loops of P1R5
 ```
 
-Here, `P2` uses all stitches in `P1R5` as its foundation, so the base and ruffle are simulated as one whole. See [Begin with existing stitches](/docs/dsl/writing-instructions#begin-with-existing-stitches) for details.
+Here, `P2` uses all stitches in `P1R5` as its foundation, so the base and ruffle are simulated as one whole. See [Begin with existing stitches](./dsl/writing-instructions.md#begin-with-existing-stitches) for details.
 
 
 ### Clean up with formatter

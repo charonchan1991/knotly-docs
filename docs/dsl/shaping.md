@@ -6,7 +6,7 @@ Increases and decreases change the number of stitches between rounds or rows, lo
 ## Increases and decreases
 An increase produces multiple stitches from one root stitch, while a decrease combines multiple root stitches into one by working them together. Distributing these operations evenly creates gradual shaping; concentrating them in particular areas creates corners, curves, points, and asymmetrical forms.
 
-Understanding [stitch counts](/docs/quick-start#know-your-stitch-counts) is essential when working with increases and decreases. Make sure you are familiar with them before getting started.
+Understanding [stitch counts](../quick-start.md#know-your-stitch-counts) is essential when working with increases and decreases. Make sure you are familiar with them before getting started.
 
 ### Increases
 An increase works two or more stitches into the same stitch from the previous round. It consumes one root stitch but produces multiple final stitches, causing the fabric to expand.
@@ -182,9 +182,9 @@ R17: 20X
 
 SEW: R0-R17  // Sew the foundation round to the last round to form a donut ring
 ```
-`SEW: R0-R17` pairs the 20 foundation chains with the 20 stitches in the final round, closing the remaining opening and drawing the two ends together. Both [selectors](/docs/dsl/writing-instructions#selecting-stitches) omit a part code because they refer to the current part. Sewing adds no stitches, so the round counts remain unchanged; it only changes the shape by adding connections between stitches that were worked at different stages.
+`SEW: R0-R17` pairs the 20 foundation chains with the 20 stitches in the final round, closing the remaining opening and drawing the two ends together. Both [selectors](./writing-instructions.md#selecting-stitches) omit a part code because they refer to the current part. Sewing adds no stitches, so the round counts remain unchanged; it only changes the shape by adding connections between stitches that were worked at different stages.
 
-Place the `SEW:` line after both selections have been worked. The selections must contain the same number of stitches, and their pairing order should follow the intended seam. For the full syntax and examples that connect separate parts, see [Sewing parts](/docs/dsl/multi-part#sewing-parts).
+Place the `SEW:` line after both selections have been worked. The selections must contain the same number of stitches, and their pairing order should follow the intended seam. For the full syntax and examples that connect separate parts, see [Sewing parts](./multi-part.md#sewing-parts).
 
 ## Branching
 
@@ -206,7 +206,7 @@ When the branch reaches the parent round from which it originated, Knotly automa
 
 Unlike `turn`, the `r` command does not complete the current round or row. It changes direction within the same instruction sequence only.
 
-It is also worth noting that using `r[N]` after a chain automatically generates *N - 1* [turning chain stitches](/docs/dsl/writing-instructions#working-with-turning-chains). For example, `r[3]` produces two turning chain stitches. These stitches provide the height needed for the first stitch worked back into the chain.
+It is also worth noting that using `r[N]` after a chain automatically generates *N - 1* [turning chain stitches](./writing-instructions.md#working-with-turning-chains). For example, `r[3]` produces two turning chain stitches. These stitches provide the height needed for the first stitch worked back into the chain.
 
 > [!NOTE]
 > Use `r[N]` to reverse direction within a branch. The `turn` command completes and turns the current round or row. These two commands serve different purposes and are not interchangeable.

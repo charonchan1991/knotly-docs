@@ -6,7 +6,7 @@ This page is a quick lookup for Knotly’s pattern language. Instructions are ca
 
 ### Basic stitches
 
-Basic stitches are a series of stitches widely used throughout most patterns. They always consume one root stitch from the preceding round and produce one final stitch except for chain stitches and skips. You can work them individually or combine them into [compound increases and decreases](/docs/dsl/shaping#compound-increases-and-decreases).
+Basic stitches are a series of stitches widely used throughout most patterns. They always consume one root stitch from the preceding round and produce one final stitch except for chain stitches and skips. You can work them individually or combine them into [compound increases and decreases](./shaping.md#compound-increases-and-decreases).
 
 | Stitch | XVA notation | U.S. terminology | Consumed → produced |
 |---|---|---|---|
@@ -48,7 +48,7 @@ An increase produces multiple stitches from one root stitch, while a decrease wo
 
 In U.S. terminology, replace `st` with `sc`, `hdc`, `dc`, `tr`, or `dtr`. In XVA notation, `X`, `T`, `F`, and `E` specify the stitch type. For U.S. decreases, `tog` and `dec` are interchangeable.
 
-Square brackets also allow mixed-stitch compounds: `[sc, hdc, dc]+` works three stitches into one root stitch, while `[sc, hdc, dc]-` works three roots together as one stitch. The `+` on a compound increase is optional; the `-` on a compound decrease is required. You can use this technique to create a [shell stitch](/docs/dsl/special-stitches#shells).
+Square brackets also allow mixed-stitch compounds: `[sc, hdc, dc]+` works three stitches into one root stitch, while `[sc, hdc, dc]-` works three roots together as one stitch. The `+` on a compound increase is optional; the `-` on a compound decrease is required. You can use this technique to create a [shell stitch](./special-stitches.md#shells).
 
 ### Textured stitches
 
@@ -60,7 +60,7 @@ Textured stitches refer to 3D crochet stitches created by grouping multiple stit
 | Bobble | `Q[4F]` | `bobble` | Four double crochets | 1 → 1 |
 | Popcorn | `G` | `popcorn` | Five double crochets | 1 → 1 |
 
-A bracketed parameter changes the number and type of components in a textured stitch, for example: `puff[5hdc]`, `bobble[5dc]`, `Q[5T]`, `G[4F]`, etc. Each textured stitch consumes one root stitch and counts as one final stitch, regardless of its component count. For construction details, see [Special Stitches](/docs/dsl/special-stitches).
+A bracketed parameter changes the number and type of components in a textured stitch, for example: `puff[5hdc]`, `bobble[5dc]`, `Q[5T]`, `G[4F]`, etc. Each textured stitch consumes one root stitch and counts as one final stitch, regardless of its component count. For construction details, see [Special Stitches](./special-stitches.md).
 
 ## Command reference
 
@@ -74,7 +74,7 @@ A project’s **round mode** determines how Knotly completes each round or row w
 | Continuous rounds | `-$SL` | `-$sl` / `-$ss` | Leaves the current round open for continuous work |
 | Rows | `turn` |  `turn` | Ends and turns the current row, leaving it open |
 
-Place **end-of-round commands** at the end of an instruction line. If none is present, the project’s default round mode determines whether Knotly joins, continues, or turns. See [Round modes and end-of-round controls](/docs/dsl/fundamentals#round-modes-and-end-of-round-controls) and [Starting a part](/docs/dsl/writing-instructions#starting-a-part).
+Place **end-of-round commands** at the end of an instruction line. If none is present, the project’s default round mode determines whether Knotly joins, continues, or turns. See [Round modes and end-of-round controls](./fundamentals.md#round-modes-and-end-of-round-controls) and [Starting a part](./writing-instructions.md#starting-a-part).
 
 ### Loop-selection commands
 
@@ -87,7 +87,7 @@ By default, Knotly works through both loops of each stitch, except when working 
 | `both` / `bthl` | returns to working through **both loops** |
 | `bump` | works into the **back bump** of a chain stitch |
 
-These commands do not create stitches themselves, so their position within the instruction sequence matters. A selected loop remains active until another loop command appears or the instruction line ends. See [Shaping: Loop selection](/docs/dsl/shaping#loop-selection).
+These commands do not create stitches themselves, so their position within the instruction sequence matters. A selected loop remains active until another loop command appears or the instruction line ends. See [Shaping: Loop selection](./shaping.md#loop-selection).
 
 ### Position-control commands
 
@@ -104,7 +104,7 @@ Use `sk` to leave a gap or move between attachment points. Use `bk` when you nee
 > [!NOTE]
 > `r[N]` reverses direction within the current instruction sequence, whereas `turn` completes and turns the current round or row. They are not interchangeable.
 
-See [Position controls](/docs/dsl/shaping#position-controls) and [Branching](/docs/dsl/shaping#branching) for examples.
+See [Position controls](./shaping.md#position-controls) and [Branching](./shaping.md#branching) for examples.
 
 ### Color command
 
@@ -119,7 +119,7 @@ Use `col` or `color` before the stitches that should receive a color. Color comm
 
 `color[...]` is the full-length alias for `col[...]`. A color remains active for subsequent stitches in the same part until another color command changes it. The current selection resets when a part ends, but the palette is shared across the entire project. Each distinct hexadecimal color is added to that palette in the order it is first defined, so a palette index must be defined before it can be referenced.
 
-The `#` inside a hexadecimal parameter is part of the color value and does not begin a comment. See [Working with colors](/docs/dsl/writing-instructions#working-with-colors) for palette and color-changing examples.
+The `#` inside a hexadecimal parameter is part of the color value and does not begin a comment. See [Working with colors](./writing-instructions.md#working-with-colors) for palette and color-changing examples.
 
 ### Assembly commands
 
@@ -131,13 +131,13 @@ Assembly commands connect stitches that already exist. They create structural re
 | `SEW: A-B` | Connects [stitch selection](#selector-reference) `A` and [stitch selection](#selector-reference) `B` in their written order |
 | `SEW: A~B`| Reverses [stitch selection](#selector-reference) `B`, then connects it to [stitch selection](#selector-reference) `A` |
 
-Place `join[Pn]` within a round or row to bring in the last round of another part and continue working across both parts as a whole. The command neither copies the joined stitches nor creates new ones; subsequent instructions work into the stitches brought in from part `Pn`. See [Joining parts](/docs/dsl/multi-part#joining-parts) for details.
+Place `join[Pn]` within a round or row to bring in the last round of another part and continue working across both parts as a whole. The command neither copies the joined stitches nor creates new ones; subsequent instructions work into the stitches brought in from part `Pn`. See [Joining parts](./multi-part.md#joining-parts) for details.
 
 Write `SEW:` on its own line after both [selections](#selector-reference) have been worked. Sewing adds connections without changing either selection’s stitch count, and both sides must contain the same number of stitches. A hyphen pairs them in their selected order, while a tilde reverses the second selection before pairing.
 
-A `SEW:` line must appear within the scope of one of the parts it connects. Multiple connections can be placed on one line by separating them with commas. See [Sewing parts](/docs/dsl/multi-part#sewing-parts) and [Sewing within a part](/docs/dsl/shaping#sewing-within-a-part) for complete examples.
+A `SEW:` line must appear within the scope of one of the parts it connects. Multiple connections can be placed on one line by separating them with commas. See [Sewing parts](./multi-part.md#sewing-parts) and [Sewing within a part](./shaping.md#sewing-within-a-part) for complete examples.
 
-Alternatively, you can use [selectors](#selector-reference) in `R0` to achieve joining. See [Begin with existing stitches](/docs/dsl/writing-instructions#begin-with-existing-stitches).
+Alternatively, you can use [selectors](#selector-reference) in `R0` to achieve joining. See [Begin with existing stitches](./writing-instructions.md#begin-with-existing-stitches).
 
 ## Selector reference
 
@@ -156,7 +156,7 @@ Selectors identify stitches that have already been made. They make existing stit
 
 Part code may be omitted only for the current part. Each selection must identify a round or row. A part code alone, such as `P1`, and a stitch code alone, such as `S6`, are not valid selectors. Any referenced part, round, or stitch position must already exist before the declaration of the selector.
 
-See [Selecting stitches](/docs/dsl/writing-instructions#selecting-stitches) for complete guidance.
+See [Selecting stitches](./writing-instructions.md#selecting-stitches) for complete guidance.
 
 ## Syntax limits
 

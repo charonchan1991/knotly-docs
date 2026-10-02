@@ -71,7 +71,7 @@ In `R3`, each group of `(sl, 3ch, sl)` produces a complete picot: the first slip
 
 ## Shells
 
-A shell is a fan of several stitches worked into one root stitch. It is a decorative increase, not a separate Knotly command. Use a [compound increase](/docs/dsl/shaping#compound-increases-and-decreases) to make a shell of mixed stitch types.
+A shell is a fan of several stitches worked into one root stitch. It is a decorative increase, not a separate Knotly command. Use a [compound increase](./shaping.md#compound-increases-and-decreases) to make a shell of mixed stitch types.
 
 This example arranges five graduated shells around a foundation chain ring:
 
@@ -85,4 +85,4 @@ In **Joined rounds** mode, `R0` forms a loop of ten chains. `R1` repeats two ste
 
 Each repetition uses two chain positions and produces five stitches. The five repetitions use all ten positions in `R0`, producing the 25 stitches shown in the counter gutter. The skipped positions separate the shells, while the chain loop leaves an opening at the center. Together, these elements create a star-shaped motif.
 
-The brackets are essential to make a shell: `[hdc, dc, tr, dc, hdc]+` works all five component stitches into one root stitch. If written as an ordinary comma-separated sequence, they would be worked into successive positions instead. Change the component stitches or add chain spaces between shells to vary the fan shape and openness of the fabric, and [check the stitch counts](/docs/quick-start#know-your-stitch-counts) before adding another round.
+The brackets are essential to make a shell: `[hdc, dc, tr, dc, hdc]+` works all five component stitches into one root stitch. If written as an ordinary comma-separated sequence, they would be worked into successive positions instead. Change the component stitches or add chain spaces between shells to vary the fan shape and openness of the fabric, and [check the stitch counts](../quick-start.md#know-your-stitch-counts) before adding another round.

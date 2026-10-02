@@ -1,6 +1,6 @@
 # Writing Instructions
 
-Once you’re familiar with the [fundamentals](/docs/dsl/fundamentals), you’re ready to write a pattern. This guide covers the essentials of writing patterns in Knotly: starting a part, repeating instructions, working with turning chains and colors, and selecting existing stitches.
+Once you’re familiar with the [fundamentals](./fundamentals.md), you’re ready to write a pattern. This guide covers the essentials of writing patterns in Knotly: starting a part, repeating instructions, working with turning chains and colors, and selecting existing stitches.
 
 ## Starting a part
 
@@ -61,14 +61,14 @@ To create an oval, begin with a foundation chain and turn the working direction 
 R0: 9CH, turn  // Foundation chain
 R1: 8X, W, 7X, V  // '$sl' can be omitted on [Joined rounds] mode
 ```
-In this example, the stitches in `R1` are distributed around both sides and ends of the foundation chain. Because the project is set to use **Joined rounds** mode, Knotly closes the completed `R1` automatically without needing an [end-of-round command](/docs/dsl/fundamentals#round-modes-and-end-of-round-controls).
+In this example, the stitches in `R1` are distributed around both sides and ends of the foundation chain. Because the project is set to use **Joined rounds** mode, Knotly closes the completed `R1` automatically without needing an [end-of-round command](./fundamentals.md#round-modes-and-end-of-round-controls).
 
 > [!WARNING]
 > Don't use `r[N]` command to create the foundation if you need an oval.
 
 ### Begin with existing stitches
 
-A new part can use stitches from another part as its foundation. Place one or more [stitch selectors](/docs/dsl/writing-instructions#selecting-stitches) in `R0` to identify the existing stitches into which the new part will be worked.
+A new part can use stitches from another part as its foundation. Place one or more [stitch selectors](./writing-instructions.md#selecting-stitches) in `R0` to identify the existing stitches into which the new part will be worked.
 
 For example, the following two-layer skirt begins in the stitches of `R10` from the body:
 ```
@@ -97,7 +97,7 @@ P2: Outer skirt
 R0: P1R10  // Select all stitches from P1R10
 R11: FLO, 36(FW)  // Work into the front loops of the selected stitches
 ```
-A selection in `R0` does not create another copy of the selected stitches. Instead, it tells Knotly to use the selected stitches as the structural foundation of the new part. You can select an entire round, a single stitch, or a range of stitches as foundation. For complete guidance on using selectors, see [Selecting stitches](/docs/dsl/writing-instructions#selecting-stitches).
+A selection in `R0` does not create another copy of the selected stitches. Instead, it tells Knotly to use the selected stitches as the structural foundation of the new part. You can select an entire round, a single stitch, or a range of stitches as foundation. For complete guidance on using selectors, see [Selecting stitches](./writing-instructions.md#selecting-stitches).
 
 A part can also start a part from multiple selections. This is useful when connecting two existing pieces with a newly crocheted section. For example, you can use this technique to join two legs while beginning a doll’s body:
 
@@ -117,7 +117,7 @@ R7: 24X  // Join the selections and work them as one round
 When a part begins from existing stitches, Knotly treats it as structurally connected to the referenced part or parts. The connected pieces are therefore simulated together as a single assembly, allowing their shapes to influence one another. Parts that are not connected through a shared foundation, joining, or sewing are simulated independently.
 
 > [!TIP]
-> Alternatively, you can use a `join` command to connect two parts and achieve a similar result. See [Joining parts](/docs/dsl/multi-part#joining-parts) for details.
+> Alternatively, you can use a `join` command to connect two parts and achieve a similar result. See [Joining parts](./multi-part.md#joining-parts) for details.
 
 ## Repeating an instruction
 After establishing a foundation, describe each round or row as an ordered sequence of stitches and commands. Knotly processes instructions from left to right while tracking the current working position, loop selection, and stitch count.
@@ -126,7 +126,7 @@ Use repetition to keep your pattern instructions clean, concise, and readable.
 
 ### Repeating a stitch
 
-A [stitch command](/docs/dsl/language-reference#stitch-reference) without a quantity coefficient is worked once only. To repeat it, place a positive integer — called a **coefficient** — immediately before the stitch command with an optional space in between. The coefficient specifies how many times the stitch should be worked:
+A [stitch command](./language-reference.md#stitch-reference) without a quantity coefficient is worked once only. To repeat it, place a positive integer — called a **coefficient** — immediately before the stitch command with an optional space in between. The coefficient specifies how many times the stitch should be worked:
 
 ```
 R1: 6X
@@ -177,7 +177,7 @@ All these three instructions are valid and equivalent.
 Behind the scenes, Knotly expands the inner group for each repetition of the outer group. Keep the commas inside the parentheses so the commands remain part of the group.
 
 > [!WARNING]
-> Do not confuse parentheses with square brackets. Parentheses group instructions for repetition, while square brackets specify parameters or create [compound increases and decreases](/docs/dsl/shaping#compound-increases-and-decreases).
+> Do not confuse parentheses with square brackets. Parentheses group instructions for repetition, while square brackets specify parameters or create [compound increases and decreases](./shaping.md#compound-increases-and-decreases).
 
 ### Repeating rounds or rows
 
@@ -219,7 +219,7 @@ R1: 2TCH, 6F, turn  // Make the leading turning chains explicit if you want
 Knotly allows at most five turning chains at the beginning of a round or row. If you choose to specify them, provide enough height for the first stitch. Knotly will report an error otherwise.
 
 > [!NOTE]
-> The reversal command `r[N]` will also mark the first *N - 1* chains of a branch as turning chains when you work back along it. See [Creating a branch](/docs/dsl/shaping#creating-a-branch) for details.
+> The reversal command `r[N]` will also mark the first *N - 1* chains of a branch as turning chains when you work back along it. See [Creating a branch](./shaping.md#creating-a-branch) for details.
 
 
 ## Working with colors
@@ -335,7 +335,7 @@ Here, Knotly selects the six stitches from `P1` in reverse order, followed by th
 
 ### Using selectors in SEW commands
 
-Outside `R0`, use selectors within an assembly instruction such as `SEW:` rather than as standalone stitch commands. See [Sewing parts](/docs/dsl/multi-part#sewing-parts) for complete guidance.
+Outside `R0`, use selectors within an assembly instruction such as `SEW:` rather than as standalone stitch commands. See [Sewing parts](./multi-part.md#sewing-parts) for complete guidance.
 ```
 P1: First strip
 R0: 12ch, turn
