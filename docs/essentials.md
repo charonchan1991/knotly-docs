@@ -1,6 +1,6 @@
 # Essentials
 
-Knotly is an online platform for creating and visualizing crochet patterns using physics-based simulation in an interactive 3D environment. This guide walks you through the basics of using Knotly and offers helpful tips for creating and editing digital crochet projects. 
+[Knotly](https://www.knotly.com/) is an online platform for creating and visualizing crochet patterns using physics-based simulation in an interactive 3D environment. This guide walks you through the basics of using Knotly and offers helpful tips for creating and editing digital crochet projects. 
 
 ## Writing a pattern
 
