@@ -20,4 +20,4 @@ Documentation changes are maintained internally by the Knotly team. GitHub Issue
 
 ## Published documentation
 
-The published documentation is rendered by the **Knotly application**. This repository holds its source content, while the application presents that content as the user-facing documentation. To read the published documentation in its intended context, access it through Knotly.
+The published documentation is rendered by the **Knotly application**. This repository holds its source content, while the application presents that content as the user-facing documentation. To read the published documentation in its intended context, see [Knotly documentation](https://www.knotly.com/docs).
