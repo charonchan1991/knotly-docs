@@ -177,7 +177,7 @@ Work in small sections and click **Run**  to update the 3D preview whenever you 
 
 Switch between the render modes to evaluate your design:
 
-- **Sketch** exposes the underlying construction, working direction, and front or back side of the fabric
+- **Sketch** exposes the underlying construction, working direction, and right or wrong side of the fabric
 - **Chart** shows standard crochet symbols and is useful for checking stitch types and placement
 - **Realistic** gives the clearest impression of the final material, color, and overall silhouette
 

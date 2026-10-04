@@ -193,10 +193,10 @@ To turn after a particular line when another mode is selected, place the `turn` 
 ```
 R1-R5: 9sc, turn  // These rows will be worked back and forth
 ```
-Turning alternates which side of the fabric faces the viewer. Knotly tracks this change so that the front and back sides are represented correctly in the 3D preview.
+Turning alternates which side of the fabric faces the viewer. Knotly tracks this change so that the right and wrong sides are represented correctly in the 3D preview.
 
 > [!TIP]
-> Use **Sketch mode** when reviewing rows. Its front- and back-side indicators and working-direction arrows make it easier to confirm that the work turns in the intended direction.
+> Use **Sketch mode** when reviewing rows. Its right- and wrong-side indicators and working-direction arrows make it easier to confirm that the work turns in the intended direction.
 
 Another important use of the `turn` command is to create an oval as a foundation. First make a chain in `R0`, then crochet around it in a joined round:
 
