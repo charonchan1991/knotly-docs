@@ -135,6 +135,8 @@ This instruction works six single crochet stitches into the preceding round. It 
 ```
 R1: X, X, X, X, X, X  // Equivalent to '6X' or '6sc'
 ```
+The single crochet shorthands `inc`, `tog`, and `dec` also accept coefficients. `6inc` is equivalent to `6sc2inc`: it consumes six root stitches and produces twelve. `6tog` and `6dec` are equivalent to `6sc2tog`: they consume twelve root stitches and produce six.
+
 Use **commas** to combine different stitches and commands into a sequence:
 ```
 R2: 3X, V, 2X
@@ -151,6 +153,8 @@ R2: 6V
 R3: 6(X, V)
 ```
 In `R3`, each group of `(sc, sc2inc)` — or `(X, V)` as in the XVA notation — consumes two root stitches from `R2` and produces three. Repeating the group six times consumes all 12 stitches from `R2` and produces a final of 18. This is equivalent to writing `sc, sc2inc` or `X, V` six times.
+
+You can also write the U.S. sequence as `6(sc, inc)`. Here, `inc` is a complete `sc2inc` stitch operation, so the group has the same consumed and produced counts.
 
 A group without a coefficient is worked once, so you can use parentheses to separate meaningful sections of an instruction. Take the [oval example](#begin-with-ovals) above as an example: the groups distinguish the first side, one end, and the return side with the other end:
 ```

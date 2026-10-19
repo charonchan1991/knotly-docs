@@ -17,7 +17,7 @@ The following table lists commonly used increase commands:
 
 | Increase | XVA notation | U.S. terminology |
 |---|---:|---:|
-| Two-stitch single crochet increase | `V` / `XV` | `sc2inc` |
+| Two-stitch single crochet increase | `V` / `XV` | `sc2inc` / `inc` |
 | Two-stitch half double crochet increase | `TV` | `hdc2inc` |
 | Two-stitch double crochet increase | `FV` | `dc2inc` |
 | Two-stitch treble crochet increase | `EV` | `tr2inc` |
@@ -26,6 +26,8 @@ The following table lists commonly used increase commands:
 | Three-stitch double crochet increase | `FW` | `dc3inc` |
 | Three-stitch treble crochet increase | `EW` | `tr3inc` |
 | Arbitrary increase (`N`: integer, `st`: stitch type) | `[N st]+` | `stNinc` |
+
+For a two-stitch single crochet increase, `inc` is shorthand for `sc2inc`. It consumes one root stitch and produces two final stitches. A coefficient repeats the whole increase: `6inc` consumes six root stitches and produces twelve final stitches.
 
 If you are using U.S. terminology, use the syntax `stNinc` to construct an arbitrary increase, where `st` specifies the stitch type and `N` specifies the number of stitches to increase to. Possible stitch types in an arbitrary increase are: `sc`, `hdc`, `dc`, `tr`, and `dtr`. For example, `dc4inc` means working four double crochet stitches into one root stitch.
 
@@ -38,7 +40,7 @@ A decrease combines two or more consecutive root stitches into one. It consumes 
 The following table lists commonly used decrease commands:
 | Decrease | XVA notation | U.S. terminology |
 |---|---:|---:|
-| Single crochet two together | `A` / `XA`| `sc2tog` / `sc2dec` |
+| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `tog` / `dec` |
 | Half double crochet two together | `TA` | `hdc2tog` / `hdc2dec` |
 | Double crochet two together | `FA` | `dc2tog` / `dc2dec` |
 | Treble crochet two together | `EA` | `tr2tog` / `tr2dec` |
@@ -68,6 +70,8 @@ The same compound increase can be written with an even more explicit command wit
 ```
 inc[sc, hdc, dc]
 ```
+The brackets make `inc[sc, hdc, dc]` a compound increase. Without brackets, `inc` is the single crochet shorthand described above.
+
 Knotly supports compound decreases containing different stitch types, although they may not always be practical in real-world crochet. To create a compound decrease, add `-` after the brackets:
 ```
 [sc, hdc, dc]-
@@ -81,6 +85,8 @@ tog[sc, hdc, dc]
 ```
 dec[sc, hdc, dc]
 ```
+The bracketed forms `tog[...]` and `dec[...]` create compound decreases; standalone `tog` and `dec` create a single crochet two-together decrease. Knotly expands compounds internally using `_inc` and `_tog`. These underscore-prefixed commands are reserved for internal use; write compounds using the bracketed forms above.
+
 Compound increases/decreases can be repeated by placing a quantity coefficient before the brackets:
 ```
 4[X, T, F]+ // Repeat the compound increase four times

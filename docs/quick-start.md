@@ -20,7 +20,7 @@ The following table lists the equivalent stitches and operations in XVA notation
 | Half double crochet | `T` | `hdc` |
 | Double crochet | `F` | `dc` |
 | Treble crochet | `E` | `tr` |
-| Two-stitch single crochet increase | `V` / `XV` | `sc2inc` |
+| Two-stitch single crochet increase | `V` / `XV` | `sc2inc` / `inc` |
 | Two-stitch half double crochet increase | `TV` | `hdc2inc` |
 | Two-stitch double crochet increase | `FV` | `dc2inc` |
 | Two-stitch treble crochet increase | `EV` | `tr2inc` |
@@ -28,7 +28,7 @@ The following table lists the equivalent stitches and operations in XVA notation
 | Three-stitch half double crochet increase | `TW` | `hdc3inc` |
 | Three-stitch double crochet increase | `FW` | `dc3inc` |
 | Three-stitch treble crochet increase | `EW` | `tr3inc` |
-| Single crochet two together | `A` / `XA`| `sc2tog` / `sc2dec` |
+| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `tog` / `dec` |
 | Half double crochet two together | `TA` | `hdc2tog` / `hdc2dec` |
 | Double crochet two together | `FA` | `dc2tog` / `dc2dec` |
 | Treble crochet two together | `EA` | `tr2tog` / `tr2dec` |
@@ -78,12 +78,14 @@ The following table shows the numbers of stitches consumed and produced by sever
 | Stitch or command | Notation (XVA / U.S.) | # stitches consumed | # stitches produced |
 | --- | ---: | ---: | ---: |
 | Single crochet | `X` / `sc` | 1 | 1 |
-| Two-stitch single crochet increase | `V` / `sc2inc` | 1 | 2 |
+| Two-stitch single crochet increase | `V` / `sc2inc` / `inc` | 1 | 2 |
 | Three-stitch single crochet increase | `W` / `sc3inc` | 1 | 3 |
-| Single crochet two together | `A` / `sc2tog` | 2 | 1 |
+| Single crochet two together | `A` / `sc2tog` / `tog` | 2 | 1 |
 | Single crochet three together | `M` / `sc3tog` | 3 | 1 |
 | Chain stitch | `CH` / `ch` | 0 | 1 |
 | Skip | `K` / `sk` | 1 | 0 |
+
+The shorthand `inc` means `sc2inc`; `tog` and `dec` both mean `sc2tog`. Each shorthand is a complete single crochet increase or decrease and can take a repetition coefficient, such as `6inc` or `6dec`.
 
 The total number of stitches produced by each instruction line is displayed in the counter gutter on the right side of the editor. You do not need to track this manually — Knotly recalculates the count for each round or row as you type.
 

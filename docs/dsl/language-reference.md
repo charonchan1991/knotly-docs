@@ -27,7 +27,7 @@ An increase produces multiple stitches from one root stitch, while a decrease wo
 
 | Operation | XVA notation | U.S. terminology | Consumed → produced |
 |---|---|---|---|
-| Two-stitch single crochet increase | `V` / `XV` | `sc2inc` | 1 → 2 |
+| Two-stitch single crochet increase | `V` / `XV` | `sc2inc` / `inc` | 1 → 2 |
 | Two-stitch half double crochet increase | `TV` | `hdc2inc` | 1 → 2 |
 | Two-stitch double crochet increase | `FV` | `dc2inc` | 1 → 2 |
 | Two-stitch treble crochet increase | `EV` | `tr2inc` | 1 → 2 |
@@ -35,7 +35,7 @@ An increase produces multiple stitches from one root stitch, while a decrease wo
 | Three-stitch half double crochet increase | `TW` | `hdc3inc` | 1 → 3 |
 | Three-stitch double crochet increase | `FW` | `dc3inc` | 1 → 3 |
 | Three-stitch treble crochet increase | `EW` | `tr3inc` |  1 → 3 |
-| Single crochet two together | `A` / `XA`| `sc2tog` / `sc2dec` | 2 → 1 |
+| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `tog` | 2 → 1 |
 | Half double crochet two together | `TA` | `hdc2tog` / `hdc2dec` | 2 → 1 |
 | Double crochet two together | `FA` | `dc2tog` / `dc2dec` | 2 → 1 |
 | Treble crochet two together | `EA` | `tr2tog` / `tr2dec` | 2 → 1 |
@@ -46,9 +46,13 @@ An increase produces multiple stitches from one root stitch, while a decrease wo
 | Arbitrary increase (`N`: integer, `st`: stitch type) | `[N st]+` | `stNinc` | 1 → N |
 | Arbitrary decrease (`N`: integer, `st`: stitch type) | `[N st]-` | `stNtog` / `stNdec` | N → 1 |
 
+Standalone `inc` means `sc2inc`; standalone `tog` and `dec` both mean `sc2tog`. These shorthands always use single crochet. A coefficient repeats the complete operation: `6inc` consumes six root stitches and produces twelve, while `6tog` or `6dec` consumes twelve root stitches and produces six.
+
 In U.S. terminology, replace `st` with `sc`, `hdc`, `dc`, `tr`, or `dtr`. In XVA notation, `X`, `T`, `F`, and `E` specify the stitch type. For U.S. decreases, `tog` and `dec` are interchangeable.
 
 Square brackets also allow mixed-stitch compounds: `[sc, hdc, dc]+` works three stitches into one root stitch, while `[sc, hdc, dc]-` works three roots together as one stitch. The `+` on a compound increase is optional; the `-` on a compound decrease is required. You can use this technique to create a [shell stitch](./special-stitches.md#shells).
+
+The prefixed bracketed forms `inc[sc, hdc, dc]`, `tog[sc, hdc, dc]`, and `dec[sc, hdc, dc]` also create compounds. Their brackets distinguish them from the standalone single crochet shorthands.
 
 ### Textured stitches
 
