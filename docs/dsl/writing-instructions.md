@@ -355,7 +355,7 @@ In this example, <code><span class="part-code">P1</span><span class="row-code">R
 
 Both strips retain their original stitches, but Knotly treats them as a connected assembly during simulation.
 
-### Fastening off
+## Fastening off
 
 In a physical crochet project, fastening off means cutting the yarn and pulling the tail through the final loop to secure it. Leave enough yarn to weave in the end or sew the part to another piece, as needed.
 
@@ -372,4 +372,4 @@ R4: 6A, fo
 // R5: fo
 ```
 
-In **Joined rounds** and **Continuous rounds** modes, `fo` automatically tightens the final round. It has no effect on shaping in `Rows` mode or when used with increases.
+In **Joined rounds** and **Continuous rounds** modes, `fo` automatically tightens the final round. It has no effect on shaping in **Rows** mode or when used with increases.

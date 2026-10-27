@@ -110,21 +110,6 @@ Use `sk` to leave a gap or move between attachment points. Use `bk` when you nee
 
 See [Position controls](./shaping.md#position-controls) and [Branching](./shaping.md#branching) for examples.
 
-### Color commands
-
-Use `col` or `color` before the stitches that should receive a color. Color commands do not consume or produce stitches.
-
-| Command | What it does |
-|---|---|
-| `col[#RGB]` | Selects a color using a three-digit hexadecimal value |
-| `col[#RRGGBB]` | Selects a color using a six-digit hexadecimal value |
-| `col[N]` | Reuses the color at one-based index `N` in the project palette |
-| `col[0]` | Clears the current selection and returns subsequent stitches to the default appearance |
-
-`color[...]` is the full-length alias for `col[...]`. A color remains active for subsequent stitches in the same part until another color command changes it. The current selection resets when a part ends, but the palette is shared across the entire project. Each distinct hexadecimal color is added to that palette in the order it is first defined, so a palette index must be defined before it can be referenced.
-
-The `#` inside a hexadecimal parameter is part of the color value and does not begin a comment. See [Working with colors](./writing-instructions.md#working-with-colors) for palette and color-changing examples.
-
 ### Assembly commands
 
 Assembly commands connect stitches that already exist. They create structural relationships between parts — or between two areas of one part — so the connected pieces can influence one another during simulation.
@@ -143,13 +128,28 @@ A `SEW:` line must appear within the scope of one of the parts it connects. Mult
 
 Alternatively, you can use [selectors](#selector-reference) in `R0` to achieve joining. See [Begin with existing stitches](./writing-instructions.md#begin-with-existing-stitches).
 
+### Color commands
+
+Use `col` or `color` before the stitches that should receive a color. Color commands do not consume or produce stitches.
+
+| Command | What it does |
+|---|---|
+| `col[#RGB]` | Selects a color using a three-digit hexadecimal value |
+| `col[#RRGGBB]` | Selects a color using a six-digit hexadecimal value |
+| `col[N]` | Reuses the color at one-based index `N` in the project palette |
+| `col[0]` | Clears the current selection and returns subsequent stitches to the default appearance |
+
+`color[...]` is the full-length alias for `col[...]`. A color remains active for subsequent stitches in the same part until another color command changes it. The current selection resets when a part ends, but the palette is shared across the entire project. Each distinct hexadecimal color is added to that palette in the order it is first defined, so a palette index must be defined before it can be referenced.
+
+The `#` inside a hexadecimal parameter is part of the color value and does not begin a comment. See [Working with colors](./writing-instructions.md#working-with-colors) for palette and color-changing examples.
+
 ### Other commands
 
 | Command | What it does |
 |---|---|
 | `fo` | Fastens off the current work |
 
-Use `fo` to indicate that you have finished crocheting and are fastening off the yarn. Place it after the final stitches of the part. It automatically tightens the final round in **Joined rounds** and **Continuous rounds** modes.
+Use `fo` to indicate that you have finished crocheting and are fastening off the yarn. Place it after the final stitches of a part. It automatically tightens the final round in **Joined rounds** and **Continuous rounds** modes.
 
 
 ## Selector reference
