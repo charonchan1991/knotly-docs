@@ -110,7 +110,7 @@ Use `sk` to leave a gap or move between attachment points. Use `bk` when you nee
 
 See [Position controls](./shaping.md#position-controls) and [Branching](./shaping.md#branching) for examples.
 
-### Color command
+### Color commands
 
 Use `col` or `color` before the stitches that should receive a color. Color commands do not consume or produce stitches.
 
@@ -142,6 +142,15 @@ Write `SEW:` on its own line after both [selections](#selector-reference) have b
 A `SEW:` line must appear within the scope of one of the parts it connects. Multiple connections can be placed on one line by separating them with commas. See [Sewing parts](./multi-part.md#sewing-parts) and [Sewing within a part](./shaping.md#sewing-within-a-part) for complete examples.
 
 Alternatively, you can use [selectors](#selector-reference) in `R0` to achieve joining. See [Begin with existing stitches](./writing-instructions.md#begin-with-existing-stitches).
+
+### Other commands
+
+| Command | What it does |
+|---|---|
+| `fo` | Fastens off the current work |
+
+Use `fo` to indicate that you have finished crocheting and are fastening off the yarn. Place it after the final stitches of the part. It automatically tightens the final round in **Joined rounds** and **Continuous rounds** modes.
+
 
 ## Selector reference
 

@@ -354,3 +354,22 @@ SEW: P1R2-P2R2S12:S1
 In this example, <code><span class="part-code">P1</span><span class="row-code">R2</span></code> selects all 12 stitches in the last row of the first strip. <code><span class="part-code">P2</span><span class="row-code">R2</span><span class="st-code">S12:S1</span></code> selects the 12 stitches in the last row of the second strip in reverse order. The `-` sign pairs the two selections in their written order: `P1R2S1` connects to `P2R2S12`, `P1R2S2` connects to `P2R2S11`, and so on.
 
 Both strips retain their original stitches, but Knotly treats them as a connected assembly during simulation.
+
+### Fastening off
+
+In a physical crochet project, fastening off means cutting the yarn and pulling the tail through the final loop to secure it. Leave enough yarn to weave in the end or sew the part to another piece, as needed.
+
+Use `fo` to indicate that you have finished crocheting a part and are fastening off the yarn. Place it after the final stitches or on a separate line at the end of the part:
+
+```
+P1:
+R0: 24CH
+R1: 24X
+R2: 6(X, A, X)
+R3: 6(X, A)
+R4: 6A, fo
+// Alternatively, move the command to its own line:
+// R5: fo
+```
+
+In **Joined rounds** and **Continuous rounds** modes, `fo` automatically tightens the final round. It has no effect on shaping in `Rows` mode or when used with increases.
