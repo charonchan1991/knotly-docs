@@ -61,7 +61,7 @@ Textured stitches refer to 3D crochet stitches created by grouping multiple stit
 | Stitch | XVA notation | U.S. terminology | Default components | Consumed → produced |
 |---|---|---|---|---|
 | Puff | `Q` | `puff` | Four half double crochets | 1 → 1 |
-| Bobble | `Q[4F]` | `bobble` | Four double crochets | 1 → 1 |
+| Bobble | `Q[4F]` | `bobble` / `bo` | Four double crochets | 1 → 1 |
 | Popcorn | `G` | `popcorn` | Five double crochets | 1 → 1 |
 
 A bracketed parameter changes the number and type of components in a textured stitch, for example: `puff[5hdc]`, `bobble[5dc]`, `Q[5T]`, `G[4F]`, etc. Each textured stitch consumes one root stitch and counts as one final stitch, regardless of its component count. For construction details, see [Special Stitches](./special-stitches.md).

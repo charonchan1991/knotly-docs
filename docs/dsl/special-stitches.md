@@ -13,7 +13,7 @@ By default, a puff in Knotly consists of four half-double crochet stitches, wher
 | Command | Default components | Finished stitch count |
 |---|---|---:|
 | `puff` or `Q` | Four half double crochets (`4hdc`) | 1 |
-| `bobble` | Four double crochets (`4dc`) | 1 |
+| `bobble` / `bo` | Four double crochets (`4dc`) | 1 |
 
 Place the command where the textured stitch should appear in the sequence. For example, `R3` alternates an ordinary single crochet with a puff six times:
 
@@ -31,7 +31,7 @@ To control the number and type of components, add a parameter in square brackets
 | XVA notation | U.S. terminology | What is constructs |
 |---|---|---:|
 | `Q` | `puff` | A puff stitch of four half-double crochet stitches |
-| `Q[4F]` | `bobble` | A bobble stitch of four double crochet stitches |
+| `Q[4F]` | `bobble` / `bo`| A bobble stitch of four double crochet stitches |
 | `Q[5T]` | `puff[5hdc]` | A puff stitch of five half-double crochet stitches |
 | `Q[5F]` | `bobble[5dc]` | A bobble stitch of five double crochet stitches |
 
