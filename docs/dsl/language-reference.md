@@ -35,7 +35,7 @@ An increase produces multiple stitches from one root stitch, while a decrease wo
 | Three-stitch half double crochet increase | `TW` | `hdc3inc` | 1 → 3 |
 | Three-stitch double crochet increase | `FW` | `dc3inc` | 1 → 3 |
 | Three-stitch treble crochet increase | `EW` | `tr3inc` |  1 → 3 |
-| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `tog` | 2 → 1 |
+| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `dec` / `tog` | 2 → 1 |
 | Half double crochet two together | `TA` | `hdc2tog` / `hdc2dec` | 2 → 1 |
 | Double crochet two together | `FA` | `dc2tog` / `dc2dec` | 2 → 1 |
 | Treble crochet two together | `EA` | `tr2tog` / `tr2dec` | 2 → 1 |

@@ -28,7 +28,7 @@ The following table lists the equivalent stitches and operations in XVA notation
 | Three-stitch half double crochet increase | `TW` | `hdc3inc` |
 | Three-stitch double crochet increase | `FW` | `dc3inc` |
 | Three-stitch treble crochet increase | `EW` | `tr3inc` |
-| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `tog` / `dec` |
+| Single crochet two together | `A` / `XA` | `sc2tog` / `sc2dec` / `dec` / `tog` |
 | Half double crochet two together | `TA` | `hdc2tog` / `hdc2dec` |
 | Double crochet two together | `FA` | `dc2tog` / `dc2dec` |
 | Treble crochet two together | `EA` | `tr2tog` / `tr2dec` |
@@ -80,7 +80,7 @@ The following table shows the numbers of stitches consumed and produced by sever
 | Single crochet | `X` / `sc` | 1 | 1 |
 | Two-stitch single crochet increase | `V` / `sc2inc` / `inc` | 1 | 2 |
 | Three-stitch single crochet increase | `W` / `sc3inc` | 1 | 3 |
-| Single crochet two together | `A` / `sc2tog` / `tog` | 2 | 1 |
+| Single crochet two together | `A` / `sc2tog` / `dec` / `tog` | 2 | 1 |
 | Single crochet three together | `M` / `sc3tog` | 3 | 1 |
 | Chain stitch | `CH` / `ch` | 0 | 1 |
 | Skip | `K` / `sk` | 1 | 0 |
