@@ -308,7 +308,7 @@ Here, `color[1]` selects the green introduced in `R1`, and `color[2]` selects th
 | <span class="row-code">R3</span><span class="st-code">S6</span> | The sixth stitch in `R3` of the current part |
 | <span class="row-code">R3</span><span class="st-code">S6:S8</span> | Stitches 6 through 8 in `R3` of the current part, inclusive, in *forward* order |
 | <span class="row-code">R3</span><span class="st-code">S8:S6</span> | Stitches 6 through 8 in `R3` of the current part, inclusive, in *reverse* order |
-| <span class="part-code">R3</span><span class="row-code">R3</span> | All stitches in `R3` of part `P1` |
+| <span class="part-code">P1</span><span class="row-code">R3</span> | All stitches in `R3` of part `P1` |
 | <span class="part-code">P1</span><span class="row-code">R3</span><span class="st-code">S6</span> | The sixth stitch in `R3` of part `P1` |
 | <span class="part-code">P1</span><span class="row-code">R3</span><span class="st-code">S2:S5</span> | Stitches 2 through 5 in `R3` of part `P1`, inclusive, in *forward* order |
 | <span class="part-code">P1</span><span class="row-code">R3</span><span class="st-code">S5:S2</span> | Stitches 2 through 5 in `R3` of part `P1`, inclusive, in *reverse* order |
