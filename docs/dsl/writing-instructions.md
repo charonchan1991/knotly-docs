@@ -372,4 +372,4 @@ R4: 6A, fo
 // R5: fo
 ```
 
-In **Joined rounds** and **Continuous rounds** modes, `fo` automatically tightens the final round. It has no effect on shaping in **Rows** mode or when used with increases.
+In **Joined rounds** and **Continuous rounds** modes, `fo` automatically tightens the final round and closes the hole. It does not affect shaping in **Rows** mode or when the final round contains more than 24 stitches.

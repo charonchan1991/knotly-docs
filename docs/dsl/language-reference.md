@@ -149,7 +149,7 @@ The `#` inside a hexadecimal parameter is part of the color value and does not b
 |---|---|
 | `fo` | Fastens off the current work |
 
-Use `fo` to indicate that you have finished crocheting and are fastening off the yarn. Place it after the final stitches of a part. It automatically tightens the final round in **Joined rounds** and **Continuous rounds** modes.
+Use `fo` to indicate that you have finished crocheting and are fastening off the yarn. Place it after the final stitches of a part. It automatically closes the final round in **Joined rounds** and **Continuous rounds** modes if the round is converging.
 
 
 ## Selector reference
@@ -179,7 +179,7 @@ Knotly applies the following limits to keep instructions valid and models practi
 |---|---|
 | Round range | At most 100 rounds or rows can be repeated using a range |
 | Round stitch count | At most 1,000 stitches may be added to one round or row |
-| Magic ring | At most 24 available spots can be specified or worked into a ring |
+| Magic ring | At most 24 available spots can be specified or worked into a ring | 
 | Puff, bobble, popcorn | At most 8 components in one textured stitch |
 | Compound stitch | At most 12 component instructions inside one compound increase or decrease |
 | Turning chain | At most 5 leading `tch` stitches may be added in a row or joined round |
