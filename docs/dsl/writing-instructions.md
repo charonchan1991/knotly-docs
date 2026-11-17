@@ -16,7 +16,7 @@ The Knotly command for a magic ring is `mr`. It can include an optional numeric 
 R0: MR
 R1: 6X
 ```
-When the project uses **Joined rounds** mode, Knotly can usually infer the magic ring from the instructions in `R1`. The example above can therefore be shortened to:
+When the project uses **Joined rounds** or **Continuous rounds** mode, Knotly can usually infer the magic ring from the instructions in `R1` if its stitch count is suitable for a magic ring. The example above can therefore be shortened to:
 ```
 # Magic ring is assumed when R0 is missing in [Joined rounds] mode
 R1: 6X
@@ -35,7 +35,7 @@ In Knotly, a foundation chain always consists of a series of `ch` stitches follo
 R0: 9CH, turn  // Foundation chain
 R1: 9X, turn  // First row
 ```
-When the project uses **Rows** mode, Knotly will infer the foundation chain of equal length from `R1`. The example above can therefore be shortened to:
+When the project uses **Rows** mode, or when `R1` has too many stitches for a magic ring in **Joined rounds** or **Continuous rounds** mode, Knotly will infer the foundation chain of equal length from `R1`. The example above can therefore be shortened to:
 ```
 # A foundation chain is assumed when R0 is missing in [Rows] mode
 R1: 9X  // 'turn' can be omitted on [Rows] mode
